@@ -39,7 +39,7 @@ const CustomCard = ({ icon, centerText, rightText }) => (
 );
 
 const CardComponent = () => (
-    <div style={{ padding: '20px', overflow: 'hidden' }}>
+    <div style={{ padding: '20px', overflow: 'hidden', backgroundColor: '#f4f8fd' }}>
         <style>
             {`
         .ant-card-hoverable {

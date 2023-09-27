@@ -2,6 +2,7 @@ import { ConfigProvider } from 'antd';
 import React from 'react';
 import ResponsiveNav from './components/navbar/Navbar.tsx';  // Import the Navbar component
 import CardComponent from './components/homeCards/Cards.tsx';  // Import the Navbar component
+import AboutSection from './components/homeAbout/About.tsx';  // Import the Navbar component
 import ImageCarousel from './components/homecarousel/HomeCarousel.tsx';
 import './App.css';
 
@@ -18,6 +19,7 @@ const App: React.FC = () => (
     <ResponsiveNav />
     <ImageCarousel />
     <CardComponent />
+    <AboutSection />
   </ConfigProvider>
 );
 
