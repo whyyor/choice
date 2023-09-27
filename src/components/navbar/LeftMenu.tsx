@@ -3,12 +3,14 @@ import { Menu } from 'antd';
 import { MenuProps } from 'antd/lib/menu';
 const { Item }: typeof Menu = Menu;
 
-interface Props extends MenuProps { }  // You can extend this to include your specific prop types
+interface Props extends MenuProps {
+    mode: 'horizontal' | 'vertical';
+}
 
 class LeftMenu extends Component<Props> {
     render() {
         return (
-            <Menu mode="horizontal">
+            <Menu mode={this.props.mode}>
                 <Item key="home">
                     <a href="">Home</a>
                 </Item>

@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import LeftMenu from './LeftMenu';
 import RightMenu from './RightMenu';
 import { Drawer, Button, Space } from 'antd'; // Import Space from antd
+import { MenuOutlined } from '@ant-design/icons';
 import choiceLogo from '../../assets/choice-logo.png';
 import primusLogo from '../../assets/primus-logo.png';
 
@@ -46,23 +47,22 @@ class Navbar extends Component<Props, State> {
                 </div>
                 <div className="menuCon">
                     <div className="leftMenu">
-                        <LeftMenu />
+                        <LeftMenu mode='horizontal' />
                     </div>
                     <div className="rightMenu">
-                        <RightMenu />
+                        <RightMenu mode='horizontal' />
                     </div>
                     <Button className="barsMenu" type="primary" onClick={this.showDrawer}>
-                        <span className="barsBtn"></span>
+                        <MenuOutlined />
                     </Button>
                     <Drawer
-                        title="Basic Drawer"
                         placement="right"
                         closable={false}
                         onClose={this.onClose}
                         visible={this.state.visible}
                     >
-                        <LeftMenu />
-                        <RightMenu />
+                        <LeftMenu mode="vertical" />
+                        <RightMenu mode="vertical" />
                     </Drawer>
                 </div>
             </nav>
