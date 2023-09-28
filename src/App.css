@@ -39,9 +39,8 @@ code {
   padding: 0 40px;
 }
 
-
 /* Style for the menu items inside the Drawer */
-.drawer .leftMenu, 
+.drawer .leftMenu,
 .drawer .rightMenu {
   display: flex;
   flex-direction: column; /* Make items stack vertically */
@@ -59,3 +58,9 @@ code {
     display: none; /* Optional: Hide other menu items on small screens */
   }
 }
+
+.ant-input-prefix svg {
+  margin-right: 10px; /* Adjust the value as per your requirement */
+}
+
+

@@ -5,11 +5,13 @@ import dummyGovt1 from '../../assets/dummy-govt1.jpg';
 import SignInButtons from './SignInButtons';
 import SignUpButtons from './SignUpButtons';
 import LoginOptions from './LoginOptions';
+import { useNavigate } from 'react-router-dom';
 
 const { Title } = Typography;
 const { TabPane } = Tabs;
 
 const LoginSection: React.FC = () => {
+    const navigate = useNavigate();
     return (
         <div style={{
             backgroundImage: `url(${dummyGovt1})`,
@@ -20,7 +22,7 @@ const LoginSection: React.FC = () => {
             justifyContent: 'center'
         }}>
             <Row justify="center" align="middle" style={{ width: '100%', height: '100%' }}>
-                <Col xs={22}  lg={10} style={{ height: '100%' }}>
+                <Col xs={22} lg={10} style={{ height: '100%' }}>
                     <div style={{
                         backgroundColor: 'rgba(255, 255, 255, 0.6)',
                         height: '100%',
@@ -35,6 +37,7 @@ const LoginSection: React.FC = () => {
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                 }}
+                                onClick={() => navigate('/')}  // Add onClick event to navigate to the root path
                             >
                                 <ArrowLeftOutlined style={{ marginRight: '5px' }} />
                                 <HomeOutlined />
