@@ -15,7 +15,7 @@ const AboutSection: React.FC = () => {
                 <Col xs={24} style={{ textAlign: 'center' }}>
                     <h2 style={{ fontSize: '32px' }}>Find Out More <span style={{ color: '#1c5335' }}>About Us</span></h2> {/* Increase size here */}
                 </Col>
-                <Col xs={24} md={6} style={{ textAlign: 'start' }}>
+                <Col xs={24} md={15} lg={6} style={{ textAlign: 'start' }}>
                     <h3 style={{ color: '#444444', fontSize: '24px' }}>Choice - A citizen lead welfare delivery platform</h3> {/* Increase size here */}
                     <p style={{ color: 'gray', fontStyle: 'italic' }}>
                         Various States across the country have attempted to build a family based social registry however, none of them have been built with an objective to refine the existing welfare service delivery ecosystem.<br />
@@ -24,10 +24,10 @@ const AboutSection: React.FC = () => {
                         Further, this platform also provides additional features which enable both the citizens and the policy makers to utilize the potential of the data collated through such a repository to its fullest.
                     </p>
                 </Col>
-                <Col xs={24} md={6} style={{ textAlign: 'center' }}>
+                <Col xs={24} md={15} lg={6} style={{ textAlign: 'center' }}>
                     <img src={dummyImage} alt="Dummy" style={{ width: '350px', height: 'auto' }} />
                 </Col>
-                <Col xs={24} md={6} style={{ textAlign: 'center' }}>
+                <Col xs={24} md={15} lg={6} style={{ textAlign: 'center' }}>
                     <Card
                         bordered={true}
                         style={{ width: '100%', height: '100%', marginLeft: 'auto', marginRight: 'auto' }}

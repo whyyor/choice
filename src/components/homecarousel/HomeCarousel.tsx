@@ -8,10 +8,10 @@ const ImageCarousel: React.FC = () => {
         <div style={{ position: 'relative', maxHeight: '80vh', overflow: 'hidden' }}>
             <Carousel autoplay style={{ maxHeight: '80vh', overflow: 'hidden' }}>
                 <div>
-                    <img src={dummyGovt} alt="Dummy Government" style={{ width: '100%', height: '80vh', objectFit: 'cover' }} />
+                    <img src={dummyGovt} alt="Dummy Government" style={{ width: '100%', maxHeight: '80vh', objectFit: 'cover' }} />
                 </div>
                 <div>
-                    <img src={dummyGovt1} alt="Dummy Government 1" style={{ width: '100%', height: '80vh', objectFit: 'cover' }} />
+                    <img src={dummyGovt1} alt="Dummy Government 1" style={{ width: '100%', maxHeight: '80vh', objectFit: 'cover' }} />
                 </div>
             </Carousel>
             <div style={{
