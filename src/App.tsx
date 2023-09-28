@@ -1,9 +1,9 @@
+// App.tsx
 import { ConfigProvider } from 'antd';
 import React from 'react';
-import ResponsiveNav from './components/navbar/Navbar.tsx';  // Import the Navbar component
-import CardComponent from './components/homeCards/Cards.tsx';  // Import the Navbar component
-import AboutSection from './components/homeAbout/About.tsx';  // Import the Navbar component
-import ImageCarousel from './components/homecarousel/HomeCarousel.tsx';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomeView from '../src/pages/HomeView';  // Import the new HomeView component
+import LoginView from '../src/pages/LoginView';  // Import the new HomeView component
 import './App.css';
 
 const App: React.FC = () => (
@@ -11,15 +11,20 @@ const App: React.FC = () => (
     theme={{
       token: {
         // Seed Token
-        colorPrimary: '#00b96b',
-        borderRadius: 2,
+        colorPrimary: '#1c5335',
+        Button: {
+          primaryShadow: "none"
+        }
       },
     }}
   >
-    <ResponsiveNav />
-    <ImageCarousel />
-    <CardComponent />
-    <AboutSection />
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomeView />} />
+        <Route path="/login" element={<LoginView />} />
+        {/* Add more Route components here for other views */}
+      </Routes>
+    </Router>
   </ConfigProvider>
 );
 
