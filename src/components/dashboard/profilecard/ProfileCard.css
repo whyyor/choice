@@ -1,0 +1,38 @@
+.profile-card .profile-header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-avatar {
+  border: 2px dotted #1c5335; /* Your primary color */
+  margin-right: 20px;
+}
+
+.welcome-text {
+  color: #1c5335; /* Your primary color */
+  font-size: 20px;
+}
+
+.actions button {
+  margin-right: 10px;
+  color: #1c5335; /* Your primary color */
+  border-color: #1c5335; /* Your primary color */
+}
+
+.stat-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-card {
+  width: calc(25% - 15px);
+  border-radius: 10px;
+  border: 1px solid #1c5335; /* Your primary color */
+  box-shadow: 0 0 10px #1c5335; /* Your primary color */
+}
+
+.report-card .report-header {
+  color: grey;
+  font-size: 24px;
+  margin-bottom: 20px;
+}

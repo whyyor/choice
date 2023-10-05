@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
+    "@antv/g2plot": "^2.4.31",
     "@types/antd": "^1.0.0",
     "@types/react-router-dom": "^5.3.3",
     "D": "^1.0.0",
