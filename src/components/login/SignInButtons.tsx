@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { Button, Row, Col, Divider, Modal, Form, Input } from 'antd';
 import { Typography } from 'antd';
 import { MailOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 
 const { Text } = Typography;
 
 const SignInButtons: React.FC = () => {
     const [isAadhaarModalVisible, setIsAadhaarModalVisible] = useState(false);
     const [isChoiceModalVisible, setIsChoiceModalVisible] = useState(false);
+    const navigate = useNavigate(); 
 
     const showAadhaarModal = () => {
         setIsAadhaarModalVisible(true);
@@ -20,6 +22,12 @@ const SignInButtons: React.FC = () => {
     const handleClose = () => {
         setIsAadhaarModalVisible(false);
         setIsChoiceModalVisible(false);
+    };
+
+
+    const handleSendOtp = () => {
+        handleClose();
+        navigate('/dashboard'); // Navigate to the dashboard after closing the modal
     };
 
     return (
@@ -78,7 +86,7 @@ const SignInButtons: React.FC = () => {
                 onOk={handleClose}
                 onCancel={handleClose}
                 footer={[
-                    <Button key="submit" type="primary" onClick={handleClose}>Send OTP</Button>,
+                    <Button key="submit" type="primary" onClick={handleSendOtp}>Send OTP</Button>,
                 ]}
             >
                 <Form>
